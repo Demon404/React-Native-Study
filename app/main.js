@@ -14,6 +14,7 @@
 import TextComponent from './components/text';
 import ViewComponent from './components/view';
 import ImageComponent from './components/imageView';
+import Scroller from './components/scroller'
 
  export default class Main extends Component {
    //设置数据源
@@ -23,6 +24,8 @@ import ImageComponent from './components/imageView';
            {'title':'TextComponent'} ,
            {'title':'ViewComponent'},
            {'title': 'ImageComponent'},
+           {'title': 'ScrollComponent'},
+
         ]),
      });
    }
@@ -46,6 +49,10 @@ import ImageComponent from './components/imageView';
     } else if (rowdata.title == 'ImageComponent') {
       this.props.navigator.push({
         component: ImageComponent,
+      })
+    } else if (rowdata.title == 'ScrollComponent'){
+      this.props.navigator.push({
+        component: Scroller,
       })
     } else {
 

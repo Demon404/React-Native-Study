@@ -54,6 +54,6 @@ const styles = StyleSheet.create ({
     borderColor: 'black',//设置边框颜色
     borderRadius: 30,//设置圆角大小，上面几个属性表示不同位置的圆角
     opacity: 0.5,//设置透明程度，1为完全不透明
-    overflow: 'visible',//‘visible’,'hidden'当图片原始尺寸大于Image尺寸时，多余的部分是否可见
+    // overflow: 'visible',//‘visible’,'hidden'当图片原始尺寸大于Image尺寸时，多余的部分是否可见
   }
 });

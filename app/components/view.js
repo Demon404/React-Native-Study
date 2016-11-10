@@ -28,7 +28,6 @@ export default class ViewClass extends Component {
               onMagicTap={this.doubleClick}
               onMoveShouldSetResponderCapture={this.moveTest}
               pointerEvents='auto'>
-
         </View>
       </View>
     );

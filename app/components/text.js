@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Dimensions
 } from 'react-native';
+let ScreenHeight = Dimensions.get('window').height - 64;
+
+import NavBar from '../navbar';
+
 export default class TextClass extends Component {
-  onPressTitle(){
+  onPressTitle() {
     //Text  onPress的点击方法，点击之后的操作写在这里！
   }
   render() {
@@ -17,24 +24,26 @@ export default class TextClass extends Component {
     //
     //如下，Text可以嵌套使用，不过一般为了文字上下左右居中，用View嵌套Text
     return (
-      <View style={styles.container}>
-        <Text numberOfLines={0}
-              onPress={this.onPressTitle}
-              style={styles.textstyle}
-              ellipsizeMode='head'>
-          你好！我是Demon404,欢迎关注我!{'\n'}
-          我的博客园地址是：博客园{'\n'}
-          我的github：github{'\n'}
-          我的简书：简书{'\n'}
-        </Text>
-
-        <Text style={{fontWeight: 'normal'}}>
-          I am bold
-          <Text style={{color: 'red'}}>
-            and red
+      <View>
+        <NavBar name='Text' back={()=>{this.props.navigator.pop()}}/>
+        <View style={styles.container}>
+          <Text numberOfLines={0}
+                onPress={this.onPressTitle}
+                style={styles.textstyle}
+                ellipsizeMode='head'>
+            你好！我是Demon404,欢迎关注我!{'\n'}
+            我的博客园地址是：博客园{'\n'}
+            我的github：github{'\n'}
+            我的简书：简书{'\n'}
           </Text>
-        </Text>
 
+          <Text style={{fontWeight: 'normal'}}>
+            I am bold
+            <Text style={{color: 'red'}}>
+              and red
+            </Text>
+          </Text>
+        </View>
       </View>
     );
   }
@@ -42,19 +51,19 @@ export default class TextClass extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: ScreenHeight,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   textstyle: {
-    color: 'black',//文字的颜色
-    fontFamily: 'Times',//设置字体
-    fontSize: 20,//设置文字大小
-    fontStyle: 'italic',//设置文字：normal：正常体；italic：斜体
-    fontWeight: 'normal',//设置粗体字，'normal' /*default*/, 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900'
-    lineHeight: 30,//设置行高
-    textAlign: 'center',//设置字体位置，'auto' /*default*/, 'left', 'right', 'center', 'justify'
-    textDecorationLine: 'underline',//下划线和删除线的样式：['none' /*default*/, 'underline', 'line-through', 'underline line-through'
+    color: 'black', //文字的颜色
+    fontFamily: 'Times', //设置字体
+    fontSize: 20, //设置文字大小
+    fontStyle: 'italic', //设置文字：normal：正常体；italic：斜体
+    fontWeight: 'normal', //设置粗体字，'normal' /*default*/, 'bold', '100', '200', '300', '400', '500', '600', '700', '800', '900'
+    lineHeight: 30, //设置行高
+    textAlign: 'center', //设置字体位置，'auto' /*default*/, 'left', 'right', 'center', 'justify'
+    textDecorationLine: 'underline', //下划线和删除线的样式：['none' /*default*/, 'underline', 'line-through', 'underline line-through'
   }
 });

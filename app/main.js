@@ -19,7 +19,7 @@ import ImageComponent from './components/imageView';
 import Scroller from './components/scroller';
 import TextInputView from './components/inputText';
 import ListViewComponent from './components/listView';
-import ListHeaderComponent from './components/listWithHeader';
+import PassByValueComponent from './components/passByValue/first';
 
 export default class Main extends Component {
    //设置数据源
@@ -38,7 +38,7 @@ export default class Main extends Component {
             }, {
                'title': 'ListViewComponent'
             }, {
-               'title': 'ListHeaderComponent'
+               'title': 'PassByValueComponent'
             },
 
          ]),
@@ -77,9 +77,9 @@ export default class Main extends Component {
          this.props.navigator.push({
             component: ListViewComponent,
          })
-      } else if (rowdata.title == 'ListHeaderComponent') {
+      } else if (rowdata.title == 'PassByValueComponent') {
          this.props.navigator.push({
-            component: ListHeaderComponent,
+            component: PassByValueComponent,
          })
       } else {
 

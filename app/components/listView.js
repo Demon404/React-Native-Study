@@ -85,7 +85,7 @@ class List extends Component {
                 <ListView
                     initiaListSize={2}
                     pageSize={2}
-                    dataSource={this.state.dataSource}
+                    dataSource={this.props.data}
                     renderRow={this.cellRow.bind(this)}
                     style={styles.listView}
                 />

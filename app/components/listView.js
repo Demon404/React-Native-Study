@@ -71,6 +71,7 @@ class List extends Component {
         );
     }
     rowPressed(rowdata) {
+        console.log(rowdata);
         // this.props.navigator.push({
         //   component: Detail,
         //   params: {
@@ -85,7 +86,7 @@ class List extends Component {
                 <ListView
                     initiaListSize={2}
                     pageSize={2}
-                    dataSource={this.props.data}
+                    dataSource={this.state.dataSource}
                     renderRow={this.cellRow.bind(this)}
                     style={styles.listView}
                 />

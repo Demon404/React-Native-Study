@@ -89,8 +89,10 @@ class List extends Component {
                     dataSource={this.state.dataSource}
                     renderRow={this.cellRow.bind(this)}
                     style={styles.listView}
-                />
-                
+                >
+                </ListView>
+                <View style={{height:200,backgroundColor:'red',width:200, position:'absolute',top:64}}></View>
+
             </View>
         );
     }
@@ -116,6 +118,7 @@ const styles = StyleSheet.create({
     listView: {
         backgroundColor: 'gainsboro',
         flex: 1,
+
     }
 });
 

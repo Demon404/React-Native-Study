@@ -72,12 +72,6 @@ class List extends Component {
     }
     rowPressed(rowdata) {
         console.log(rowdata);
-        // this.props.navigator.push({
-        //   component: Detail,
-        //   params: {
-        //     nextdata: rowdata
-        //   },
-        // })
     }
     render() {
         return (
@@ -91,7 +85,6 @@ class List extends Component {
                     style={styles.listView}
                 >
                 </ListView>
-                <View style={{height:200,backgroundColor:'red',width:200, position:'absolute',top:64}}></View>
 
             </View>
         );

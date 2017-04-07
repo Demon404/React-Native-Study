@@ -20,6 +20,7 @@ import Scroller from './components/scroller';
 import TextInputView from './components/inputText';
 import ListViewComponent from './components/listView';
 import PassByValueComponent from './components/passByValue/first';
+import Animation from './components/animation';
 
 export default class Main extends Component {
    //设置数据源
@@ -39,6 +40,8 @@ export default class Main extends Component {
                'title': 'ListViewComponent'
             }, {
                'title': 'PassByValueComponent'
+            }, {
+               'title': 'Animation'
             },
 
          ]),
@@ -80,6 +83,10 @@ export default class Main extends Component {
       } else if (rowdata.title == 'PassByValueComponent') {
          this.props.navigator.push({
             component: PassByValueComponent,
+         })
+      } else if (rowdata.title == 'Animation') {
+         this.props.navigator.push({
+            component: Animation,
          })
       } else {
 

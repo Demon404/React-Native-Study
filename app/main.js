@@ -13,36 +13,37 @@ import {
    ListView,
    TouchableHighlight,
 } from 'react-native';
-import TextComponent from './components/text';
-import ViewComponent from './components/view';
-import ImageComponent from './components/imageView';
-import Scroller from './components/scroller';
-import TextInputView from './components/inputText';
-import ListViewComponent from './components/listView';
-import PassByValueComponent from './components/passByValue/first';
-import Animation from './components/animation';
+import ComponentItem from './lib/component';
+// import ViewComponent from './components/view';
+// import ImageComponent from './components/imageView';
+// import Scroller from './components/scroller';
+// import TextInputView from './components/inputText';
+// import ListViewComponent from './components/listView';
+// import PassByValueComponent from './components/passByValue/first';
+// import Animation from './components/animation';
 
 export default class Main extends Component {
    //设置数据源
    componentWillMount() {
       this.setState({
          dataSource: this.state.dataSource.cloneWithRows([{
-               'title': 'TextComponent'
-            }, {
-               'title': 'ViewComponent'
-            }, {
-               'title': 'ImageComponent'
-            }, {
-               'title': 'ScrollComponent'
-            }, {
-               'title': 'TextInputComponent'
-            }, {
-               'title': 'ListViewComponent'
-            }, {
-               'title': 'PassByValueComponent'
-            }, {
-               'title': 'Animation'
-            },
+               'title': 'ComponentItem'
+            }, 
+            // {
+            //    'title': 'ViewComponent'
+            // }, {
+            //    'title': 'ImageComponent'
+            // }, {
+            //    'title': 'ScrollComponent'
+            // }, {
+            //    'title': 'TextInputComponent'
+            // }, {
+            //    'title': 'ListViewComponent'
+            // }, {
+            //    'title': 'PassByValueComponent'
+            // }, {
+            //    'title': 'Animation'
+            // },
 
          ]),
       });
@@ -56,39 +57,41 @@ export default class Main extends Component {
       };
    }
    rowPressed(rowdata) {
-      if (rowdata.title == 'TextComponent') {
+      if (rowdata.title == 'ComponentItem') {
          this.props.navigator.push({
-            component: TextComponent,
+            component: ComponentItem,
          })
-      } else if (rowdata.title == 'ViewComponent') {
-         this.props.navigator.push({
-            component: ViewComponent,
-         })
-      } else if (rowdata.title == 'ImageComponent') {
-         this.props.navigator.push({
-            component: ImageComponent,
-         })
-      } else if (rowdata.title == 'ScrollComponent') {
-         this.props.navigator.push({
-            component: Scroller,
-         })
-      } else if (rowdata.title == 'TextInputComponent') {
-         this.props.navigator.push({
-            component: TextInputView,
-         })
-      } else if (rowdata.title == 'ListViewComponent') {
-         this.props.navigator.push({
-            component: ListViewComponent,
-         })
-      } else if (rowdata.title == 'PassByValueComponent') {
-         this.props.navigator.push({
-            component: PassByValueComponent,
-         })
-      } else if (rowdata.title == 'Animation') {
-         this.props.navigator.push({
-            component: Animation,
-         })
-      } else {
+      } 
+      // else if (rowdata.title == 'ViewComponent') {
+      //    this.props.navigator.push({
+      //       component: ViewComponent,
+      //    })
+      // } else if (rowdata.title == 'ImageComponent') {
+      //    this.props.navigator.push({
+      //       component: ImageComponent,
+      //    })
+      // } else if (rowdata.title == 'ScrollComponent') {
+      //    this.props.navigator.push({
+      //       component: Scroller,
+      //    })
+      // } else if (rowdata.title == 'TextInputComponent') {
+      //    this.props.navigator.push({
+      //       component: TextInputView,
+      //    })
+      // } else if (rowdata.title == 'ListViewComponent') {
+      //    this.props.navigator.push({
+      //       component: ListViewComponent,
+      //    })
+      // } else if (rowdata.title == 'PassByValueComponent') {
+      //    this.props.navigator.push({
+      //       component: PassByValueComponent,
+      //    })
+      // } else if (rowdata.title == 'Animation') {
+      //    this.props.navigator.push({
+      //       component: Animation,
+      //    })
+      // } 
+      else {
 
       }
    }
